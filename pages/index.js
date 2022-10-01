@@ -49,7 +49,14 @@ export default function Home() {
             <div className={styles.buyingPowerTitle}> Buying Power</div>
             <div className={styles.buyingPowerAmount}>12 ETH</div>
           </div>
-           
+          <div className={styles.notice}>
+            <div className={styles.noticeContainer}>
+              <div className={styles.noticeTitle}>Send Funds</div>
+              <div className={styles.noticeMessage}>
+                Transfer your funds here.
+              </div>
+            </div>
+          </div>
           {/* Notice componenet] */}
         </div>  
 
