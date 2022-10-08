@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import {AiOutlineAccountBook, AiOutlineSearch, AIOutlineSearch} from 'react-icons/ai'
-
+import logo from '../assets/logo.png'
 
 const styles = {
     container: 'flex w-screen h-16 bg-black px-24 py-3 mb-5 fixed',
@@ -16,7 +16,8 @@ const styles = {
     rightHeader: 'flex items-center justify-end text-white gap-8',
     menuItem: 'cursor-pointer font-bold hover:text-green-500 duration-300',
   } 
-  
+
+// make Dynamic later
 const isAuthenticated = true
 const formattedAccount ="0xE5BE...163"
 
@@ -24,7 +25,7 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.leftHeader}>
-        {/* Image */}
+        <Image src={logo} height={100} width={100} className={styles.logo}/>
       </div>
       <div className={styles.searchWrapper}>
         <div className={styles.searchInputContainer}>
