@@ -17,6 +17,9 @@ const styles = {
     menuItem: 'cursor-pointer font-bold hover:text-green-500 duration-300',
   } 
   
+const isAuthenticated = true
+const formattedAccount ="0xE5BE...163"
+
 const Header = () => {
   return (
     <div className={styles.container}>
@@ -36,9 +39,20 @@ const Header = () => {
         <div className={styles.menuItem}>Portfolio</div>
         <div className={styles.menuItem}>Cash</div>
         <div className={styles.menuItem}>Message</div>
-        <div className={styles.menuItem} onClick = {()=>connectWallet()}>
-          Login
-        </div>
+        {isAuthenticated && (
+          <>
+            <div className={styles.menuItem}>{formattedAccount}</div>
+            <div className={styles.menuItem} onClick={() => signOut()}>
+              Logout
+            </div>
+          </>
+        )}
+
+        {!isAuthenticated && (
+          <div className={styles.menuItem} onClick={() => connectWallet()}>
+            Login
+          </div>
+        )}
        
       </div>
     </div>
