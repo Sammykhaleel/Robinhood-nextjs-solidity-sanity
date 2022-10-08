@@ -2,6 +2,8 @@
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
 import { AiOutlinePlus } from 'react-icons/ai'
 import Header from '../components/Header'
+import BuyTokens from '../components/BuyTokens'
+import PortfolioChart from '../components/PortfolioChart'
 
 const styles = {
   wrapper: 'w-screen h-screen flex flex-col',
@@ -43,7 +45,7 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.chartContainer}>
-              {/* portfolio chart */}
+              <PortfolioChart />
             </div>
           </div>
           <div className={styles.buyingPowerContainer}>
@@ -56,6 +58,7 @@ export default function Home() {
               <div className={styles.noticeMessage}>
                 Transfer your funds here.
               </div>
+              <BuyTokens />
             </div>
           </div>
           {/* Notice componenet] */}
