@@ -4,6 +4,8 @@ import { AiOutlinePlus } from 'react-icons/ai'
 import Header from '../components/Header'
 import BuyTokens from '../components/BuyTokens'
 import PortfolioChart from '../components/PortfolioChart'
+import Notice from '../components/Notice'
+import Assets from '../components/Assets'
 
 const styles = {
   wrapper: 'w-screen h-screen flex flex-col',
@@ -61,7 +63,7 @@ export default function Home() {
               <BuyTokens />
             </div>
           </div>
-          {/* Notice componenet] */}
+          < Notice />
         </div>  
 
         <div className={styles.rightMain}>
@@ -72,7 +74,7 @@ export default function Home() {
             <BiDotsHorizontalRounded className={styles.moreOptions}/>
           </div>
           {/* map through coins */}
-          {/* Assets */}
+          <Assets />
           <div className={styles.rightMainItem}>
             <div className={styles.ItemTitle}>
               List
